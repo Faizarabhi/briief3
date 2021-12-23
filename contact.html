@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="stylefcontact.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+ 
+</head>
+<body>
+    
+    <!-- main page -->
+    <div class="main">
+        <nav><input type="checkbox"  id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+        <img class="logo" src="logo.svg" alt="logo">
+        <ul>   
+             <li><a href="indexf.html">Home</a></li>
+               <li><a href="collections.html">Gallery</a></li>
+               <li><b><a href="contact.html">Contact Us</a></b></li>
+                 <li><a href="Reservation.html">Reservation</a></li>
+        </ul>
+        </nav>
+    
+    </div>
+    <div class="contact-form">
+        <div class="div">
+        <h1>Contact Us</h1>
+
+        <div class="txtb-c">
+        <div class="txtb">
+            <label >Nom :</label>
+            <input type="text" id="nom"  placeholder="tapez votre nome ">
+            </div>
+            <div class="txtb">
+                <label >Email :</label>
+                <input type="email" placeholder="votre email" id="mail" >
+            </div>
+            <div class="txtb">
+                <label >Message :</label>
+                <textarea placeholder="votre message" id="msg" cols="30" rows="10"></textarea>
+            </div>
+            <a class="btn" onclick="afficher()">Send</a>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="inner-modal">
+          <span class="close">&times;</span>
+          <h4>Name : <span id="nomh"></span></h4>
+          <h4>Email : <span id="mailh"></span></h4>
+          <h4>Message : <span id="msgh"></span></h4>
+        </div>
+     
+</div>
+
+</div>
+
+    <footer class="footer">
+        <div class="container3">
+           <div class="row">
+              <div class="footer-col">
+                 <h4>company</h4>
+                 <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                 </ul>
+              </div>
+              <div class="footer-col">
+                 <h4>get help</h4>
+                 <ul>
+                    <li><a href="#">FAQ</a></li>
+  
+                    <li><a href="#">payment options</a></li>
+                 </ul>
+              </div>
+  
+              <div class="footer-col">
+                 <h4>follow us</h4>
+                 <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                 </div>
+              </div>
+           </div>
+           <div class="copyright">
+              <p>Empire Car-auto © 2022 All rights reserved.</p>
+           </div>
+        </div>
+     </footer>
+    <script type="">
+        console.log(5);
+        function afficher(){
+            console.log(6);
+            var name = document.querySelector('#nom').value;
+            console.log(7);
+  var email = document.querySelector('#mail').value;
+  console.log(7);
+  var msg = document.querySelector('#msg').value;
+  console.log(msg);
+ 
+      
+        var modal = document.querySelector(".modal");
+  var close = document.querySelector(".close");
+        if (name == "" || email == "" ||  msg == "") {
+    alert("remplir tout les champ svp!");
+  } else {
+    modal.style.transform = "translateY(0)";
+    document.querySelector('body').style.overflowY = "hidden";
+
+  }
+  close.addEventListener("click", () => {
+    document.querySelector('body').style.overflowY = "auto";
+    modal.style.transform = "translateY(-100%)";
+  });
+
+  document.querySelector("#nomh").innerHTML = name;
+  document.querySelector("#mailh").innerHTML = email;
+  document.querySelector("#msgh").innerHTML = msg;
+  }
+    </script>
+</body>
+</html>
