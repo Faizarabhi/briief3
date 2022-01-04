@@ -11,7 +11,7 @@
     <!-- Main Template Css File -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Style Index -->
-<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="reservation.css">
     <!-- Render All Elemnts Normally -->
 <link rel="stylesheet" href="css/normalize.css">
     <!-- Font Awesome Library -->
@@ -25,6 +25,7 @@
 
 </head>
 <body>
+
 <!-- Start Header -->
 <header>
     <div class="container">
@@ -37,8 +38,8 @@
             <ul>
             <li><a  href="index.html" >Home</a></li>
             <li><a href="gallerie.html">Galerie</a></li>
-            <li><a href="contact.html"class="active">Contact</a></li>
-            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reservation.html" class="active">Reservation</a></li>
         </ul>
         <div class="form">
             <i class="fas fa-search"></i>
@@ -47,51 +48,64 @@
     </div>
 </header>
 <!-- End Header -->
-<!-- Start Contact -->
-<div class="contact">
-<div class="container">
-    <div class="main-heading">
-    <h2>Contact Us</h2>
-    <p>
-        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
-        tincidunt.
-    </p>
-    </div>
-    <div class="content">
-    <form action="" id="form">
-        <input class="main-input" type="text" name="name" id="nom" placeholder="Your Name" />
-        <input class="main-input" type="email" name="mail" id="mailg" placeholder="Your Email" />
-        <textarea class="main-input" name="message" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" />
-    </form>
-    <div class="info">
-        <h4>Get In Touch</h4>
-        <span class="phone">+00 123.456.789</span>
-        <span class="phone">+00 123.456.789</span>
-        <h4>Where We Are</h4>
-        <address>Awesome Address 17<br />New York, NYC<br />123-4567-890<br />USA</address>
-    </div>
-    </div>
-</div>
-</div>
-
-<div class="popback">
-    <div class="pop">
-        <div class="popclose">
-        <p>x</p>
+     <!-- Start Reservation -->
+  
+      <section class="reserve">
+       
+         
+            <div class="container">
+                <div class="main-heading">
+                    <h2>Reserve Now</h2>
+                    <p>
+                      Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+                      tincidunt.
+                    </p>
+                  </div>
+            
+        <div class="inner-reserve container">
+          <form action="">
+            <h3>Select Type Of Vehicle</h3>
+            <select name="Type" id="type" onchange="clearList(),getType()">
+              <option>Select Type</option>
+              <option>Moto</option>
+              <option>Citadine</option>
+              <option>Compact</option>
+              <option>Berline</option>
+              <option>Utilitaire</option>
+              <option>Engin de Chantier</option>
+              <option>Camion</option>
+            </select>
+          </form>
+          <h3>Transmission</h3>
+          <div class="transmission">
+            <input type="radio" id="manual" name="transmission" value="manual" />
+            <label for="manual">Manual</label>
+            <input type="radio" id="auto" name="transmission" value="auto" />
+            <label for="auto">Automatique</label>
+          </div>
+          <h3>Fuel</h3>
+          <div class="boit">
+            <input type="radio" id="elect" name="boit" value="0.05" />
+            <label for="elect">Electrique</label>
+            <input type="radio" id="hybride" name="boit" value="0.09" />
+            <label for="hybride">Hybride</label>
+            <input type="radio" id="essence" name="boit" value="0.14" />
+            <label for="essence">Essence</label>
+            <input type="radio" id="diesel" name="boit" value="0.21" />
+            <label for="diesel">Diesel</label>
+          </div>
+          <h3>Total Days</h3>
+          <input type="number" id="days" name="days" placeholder="Type Days.." />
+          <button onclick="calcPrice()">Submit</button>
+          <div class="total">
+            <h3>Total : <span id="totalPrice">0.0</span>$</h3>
+          </div>
         </div>
-        <div class="content">
-            <h1>your infos</h1>
-            <h2 class="name"></h2>
-            <h2 class="mail"></h2>
-            <h2 class="message"></h2>
-        </div>
-    </div>
-</div>
-<!-- End Contact -->
-
-        <!-- Start Footer -->
-        <footer class="footer">
+      </section>
+      <!-- End Reservation -->
+      <script src="js/main.js"></script>
+         <!-- Start Footer -->
+         <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="footer-col">
@@ -134,8 +148,19 @@
                     </div>
                 </div>
             </div>
-    </footer>
-        <!-- End Footer -->
-    <script src="/js/main.js"></script>
+       </footer>
+          <!-- End Footer -->
+      <script src="js/main.js">
+     
+        var navbar = document.querySelector(".ham_menu");
+        var ham = document.querySelector(".ham");
+  
+        ham.addEventListener("click", toggleHamburger);
+  
+        function toggleHamburger() {
+          navbar.classList.toggle("showNav");
+          ham.classList.toggle("showClose");
+        }
+      </script>
 </body>
 </html>

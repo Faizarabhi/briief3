@@ -1,0 +1,222 @@
+.reserve{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(images/cuz.jpg);
+    /* background-image: url(../Image/bg.jpg); */
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+  
+  
+}
+.main-heading h2{
+color:#fff;
+margin-top: 20px;
+}
+section.reserve {
+    padding: 90px 0;
+    text-align: center;
+  }
+  
+  
+
+  section.reserve .inner-reserve {
+    padding: 40px 80px;
+    background: rgb(15 116 143 / 50%);
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  section.reserve .inner-reserve h3 {
+   
+    color: #fff;
+
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  section.reserve .inner-reserve input[type="radio" i]:disabled + label {
+    cursor: no-drop;
+    color: gray;
+    border: 2px solid gray;
+    opacity: 0.8;
+  }
+  
+  section.reserve .inner-reserve input[type="radio" i]:disabled + label::before {
+    border: solid 2px gray;
+  }
+  
+  section.reserve .inner-reserve select {
+    color: white;
+    padding: 16px;
+    border-radius: 5px;
+    border: 2px solid white;
+    /* appearance: none; */
+    background: #fff0;
+    outline: none;
+  }
+  
+  section.reserve .inner-reserve select option {
+    color: #19c8fa;
+  }
+  
+  section.reserve .inner-reserve .transmission {
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  section.reserve .inner-reserve .transmission input[type="radio"] {
+    display: none;
+  }
+  
+  section.reserve .inner-reserve .transmission label {
+    padding: 16px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: #fff0;
+    margin-right: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 160px;
+    cursor: pointer;
+  }
+  
+  section.reserve .inner-reserve .transmission label:last-child {
+    margin-right: 0;
+  }
+  
+  section.reserve .inner-reserve .transmission label::before {
+    height: 20px;
+    width: 20px;
+    content: "";
+    margin-right: 15px;
+    border-radius: 50%;
+    border: solid 2px white;
+  }
+  
+  section.reserve .inner-reserve .transmission input[type="radio"]:checked + label {
+    background: white;
+    color: #19c8fa;
+  }
+  
+  section.reserve .inner-reserve .transmission input[type="radio"]:checked + label::before {
+    height: 12px;
+    width: 12px;
+    border: solid 6px #19c8fa;
+  }
+  
+  section.reserve .inner-reserve .boit {
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  section.reserve .inner-reserve .boit input[type="radio"] {
+    display: none;
+  }
+  
+  section.reserve .inner-reserve .boit label {
+    padding: 16px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: #fff0;
+    margin-right: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 160px;
+    cursor: pointer;
+  }
+  
+  section.reserve .inner-reserve .boit label:last-child {
+    margin-right: 0;
+  }
+  
+  section.reserve .inner-reserve .boit label::before {
+    height: 20px;
+    width: 20px;
+    content: "";
+    margin-right: 15px;
+    border-radius: 50%;
+    border: solid 2px white;
+  }
+  
+  section.reserve .inner-reserve .boit input[type="radio"]:checked + label {
+    background: white;
+    color: #19c8fa;
+  }
+  
+  section.reserve .inner-reserve .boit input[type="radio"]:checked + label::before {
+    height: 12px;
+    width: 12px;
+    border: solid 6px #19c8fa;
+  }
+  
+  section.reserve .inner-reserve input[name="days"] {
+    padding: 16px;
+    border-radius: 5px;
+    border: 2px solid white;
+    outline: none;
+  }
+  
+  section.reserve .inner-reserve button {
+    color: #19c8fa;
+    padding: 16px 45px;
+    border-radius: 5px;
+    font-weight: 600;
+    background: white;
+    border: 1px solid #fff;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  section.reserve .inner-reserve button:hover {
+    opacity: 0.9;
+  }
+  
+  section.reserve .inner-reserve .total h3 {
+    text-align: right;
+  }
+  
+  section.reserve .inner-reserve .total h3 span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #a3ddcb;
+  }
+  
+  @media only screen and (min-width: 599px) and (max-width: 767px) {
+    section.reserve .inner-reserve {
+      padding: 40px 40px;
+    }
+    section.reserve .inner-reserve .transmission, section.reserve .inner-reserve .boit {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+    }
+    section.reserve .inner-reserve .transmission label, section.reserve .inner-reserve .boit label {
+      margin-bottom: 5px;
+    }
+  }
+  
+  @media only screen and (min-width: 280px) and (max-width: 599px) {
+    section.reserve .inner-reserve .transmission, section.reserve .inner-reserve .boit {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+    }
+    section.reserve .inner-reserve .transmission label, section.reserve .inner-reserve .boit label {
+      margin-bottom: 5px;
+    }
+    section.reserve .inner-reserve input {
+      margin-bottom: 5px;
+    }
+  }
