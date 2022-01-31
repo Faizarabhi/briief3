@@ -59,10 +59,10 @@
     </div>
     <div class="content">
     <form action="" id="form">
-        <input class="main-input" type="text" name="name" id="nom" placeholder="Your Name" />
-        <input class="main-input" type="email" name="mail" id="mailg" placeholder="Your Email" />
-        <textarea class="main-input" name="message" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" />
+        <input class="main-input" type="text" name="name" class="name" id="nom" placeholder="Your Name" />
+        <input class="main-input" type="email" name="mail" class="mail" id="mailg" placeholder="Your Email" />
+        <textarea class="main-input" name="message" id="msg" class="message" placeholder="Your Message"></textarea>
+        <input type="submit" name="send" class="send" value="Send Message" />
     </form>
     <div class="info">
         <h4>Get In Touch</h4>
@@ -75,19 +75,19 @@
 </div>
 </div>
 
-<div class="popback">
+
     <div class="pop">
         <div class="popclose">
-        <p>x</p>
+            <i class="fas fa-times"></i>
         </div>
         <div class="content">
             <h1>your infos</h1>
-            <h2 class="name"></h2>
-            <h2 class="mail"></h2>
-            <h2 class="message"></h2>
+            <h2 class="name"> Name : <span id="name" ></span> </h2>
+            <h2 class="mail"> Mail : <span id="mail"></span></h2>
+            <h2 class="message"> Message : <span id="message"></span></h2>
         </div>
     </div>
-</div>
+
 <!-- End Contact -->
 
         <!-- Start Footer -->
@@ -136,6 +136,6 @@
             </div>
     </footer>
         <!-- End Footer -->
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
