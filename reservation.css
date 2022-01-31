@@ -1,6 +1,4 @@
 .reserve{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(images/cuz.jpg);
-    /* background-image: url(../Image/bg.jpg); */
     width: 100%;
     height: auto;
     background-repeat: no-repeat !important;
@@ -9,8 +7,11 @@
   
   
 }
+.main-heading{
+  margin-top: 47px;
+}
 .main-heading h2{
-color:#fff;
+color:#000;
 margin-top: 20px;
 }
 section.reserve {
