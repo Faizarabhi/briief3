@@ -141,7 +141,7 @@ function clearList() {
 var navbar = document.querySelector(".ham_menu");
 var ham = document.querySelector(".ham");
 
-ham.addEventListener("click", toggleHamburger);
+// ham.addEventListener("click", toggleHamburger);
 
 function toggleHamburger() {
   navbar.classList.toggle("showNav");
@@ -150,11 +150,39 @@ function toggleHamburger() {
 
 
 
-// Start Contact
-// let nom1 =  document.querySelector('#nom'),
-// mail1 = document.querySelector('#mailg');
-let form = document.querySelector('form');
-form.addEventListener('submit',e =>{
-  e.preventDefault();
-});
+// Start Contact 
+        var send= document.querySelector(".send");
+        var pop = document.querySelector(".pop");
+        var close = document.querySelector(".popclose");
+
+  send.addEventListener("click",function (e){
+    e.preventDefault();
+
+    var nom = document.querySelector("#nom").value;
+    var email = document.querySelector("#mailg").value;
+    var message = document.querySelector("#msg").value;
+
+        
+        
+      if(nom == "" || email == "" || message == ""){
+        alert("3mer kolchi ");
+      }
+      else{
+        pop.style.visibility = "visible";
+      }
+      document.querySelector("#name").innerHTML = nom;
+      document.querySelector("#mail").innerHTML = email;
+      document.querySelector("#message").innerHTML = message;
+
+      close.addEventListener("click",function(e){
+        e.preventDefault();
+        pop.style.visibility="hidden";
+      })
+    })
+
+
+
+
+
+
 
